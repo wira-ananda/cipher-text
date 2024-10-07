@@ -22,15 +22,3 @@ export function evdecrypt(ciphertext, key) {
 
   return decryptedText;
 }
-
-let text = "WIRAA";
-let key = "ASD";
-
-console.log("text: " + text);
-console.log("Key: " + key);
-
-let encryptedText = evencrypt(text, key);
-console.log("Encrypted Text: " + encryptedText);
-
-let decryptedText = evdecrypt(encryptedText, key);
-console.log("Decrypted Text: " + decryptedText);

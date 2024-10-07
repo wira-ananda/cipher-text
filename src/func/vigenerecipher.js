@@ -49,3 +49,13 @@ export function vigenereDecrypt(cipherText, key) {
 
   return result;
 }
+
+// Contoh penggunaan
+const text = "WIRAA";
+const key = "ASD";
+
+const encrypted = vigenereEncrypt(text, key);
+console.log("Encrypted:", encrypted);
+
+const decrypted = vigenereDecrypt(encrypted, key);
+console.log("Decrypted:", decrypted);
