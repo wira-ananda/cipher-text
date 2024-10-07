@@ -24,19 +24,8 @@ export function otpDecrypt(ciphertext, key) {
   for (let i = 0; i < ciphertext.length; i++) {
     const c = ciphertext.charCodeAt(i) - "A".charCodeAt(0);
     const k = key.charCodeAt(i) - "A".charCodeAt(0);
-    const p = (c - k + 26) % 26; // Menambahkan 26 untuk memastikan tidak negatif
+    const p = (c - k + 26) % 26;
     text += String.fromCharCode(p + "A".charCodeAt(0));
   }
   return text;
 }
-
-// Contoh Penggunaan
-const text = "HELLO"; // Pesan yang akan dienkripsi
-const key = generateRandomKey(text.length); // Menghasilkan kunci acak sepanjang pesan
-const ciphertext = otpEncrypt(text, key); // Mengenkripsi pesan
-const decryptedText = otpDecrypt(ciphertext, key); // Mendekripsi pesan
-
-console.log("Plaintext: ", text);
-console.log("Key: ", key);
-console.log("Ciphertext: ", ciphertext);
-console.log("Decrypted Text: ", decryptedText);
