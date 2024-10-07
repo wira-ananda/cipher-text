@@ -43,7 +43,8 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Cipher Encryption App</h1>
+      <h1>Cipher Text App</h1>
+      <h4>created by: Wiraa</h4>
       <div>
         <label>Input Text: </label>
         <input
