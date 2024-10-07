@@ -73,7 +73,7 @@ export default function App() {
           <option value="playfair">Playfair Cipher</option>
         </select>
       </div>
-      <button onClick={handleEncrypt}>Encrypt</button>
+      <button onClick={handleEncrypt}>- DO IT? -</button>
       <div>
         <h3>Encrypted Result:</h3>
         <textarea value={encryptedresult} readOnly rows={2} />
